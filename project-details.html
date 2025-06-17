@@ -7,6 +7,29 @@
     <title>Project Details - Ravi Patel</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+                updateThemeIcon(savedTheme);
+            } else {
+                const theme = prefersDarkScheme.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+                updateThemeIcon(theme);
+            }
+        });
+
+        function updateThemeIcon(theme) {
+            const themeToggle = document.querySelector('.theme-toggle i');
+            if (themeToggle) {
+                themeToggle.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -25,7 +48,9 @@
             </div>
         </div>
     </nav>
-
+    <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
     <!-- Project Details Section -->
     <section class="project-details">
         <div class="container">
@@ -162,6 +187,14 @@
     </footer>
 
     <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
         // Function to update project details
         function updateProjectDetails(project) {
             console.log(project);

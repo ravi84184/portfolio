@@ -1845,26 +1845,25 @@ h6 {
 }
 
 /* Dark mode styles for project details */
-@media (prefers-color-scheme: dark) {
-    .project-details {
-        background-color: var(--dark-bg);
-    }
-
-    .project-details__header,
-    .project-details__section {
-        background: var(--dark-card);
-    }
-
-    .project-details__info h1 {
-        color: var(--primary);
-    }
-
-    .project-details__subtitle,
-    .project-details__section p,
-    .project-details__section ul li {
-        color: var(--light-text);
-    }
+[data-theme="dark"] .project-details {
+    background-color: var(--dark-bg);
 }
+
+[data-theme="dark"] .project-details__header,
+.project-details__section {
+    background: var(--dark-card);
+}
+
+[data-theme="dark"] .project-details__info h1 {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .project-details__subtitle,
+.project-details__section p,
+.project-details__section ul li {
+    color: var(--light-text);
+}
+
 
 /* Responsive styles for project details */
 @media (max-width: 768px) {
