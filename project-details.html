@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Ravi Patel</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__content">
+                <a href="index.html" class="nav__logo">RP</a>
+                <div class="nav__links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#skills">Skills</a>
+                    <a href="index.html#experience">Experience</a>
+                    <a href="index.html#projects">Projects</a>
+                    <!-- <a href="index.html#contact">Contact</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Details Section -->
+    <section class="project-details">
+        <div class="container">
+            <div class="project-details__header">
+                <div class="project-details__image">
+                    <img src="" alt="" id="projectImage">
+                </div>
+                <div class="project-details__info">
+                    <h1 id="projectTitle" class="project-details__title"></h1>
+                    <p id="projectSubtitle" class="project-details__subtitle"></p>
+                    <div class="project-details__links">
+                        <a href="#" id="appStoreLink" class="btn btn--primary" target="_blank">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="#" id="playStoreLink" class="btn btn--primary" target="_blank">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-details__content">
+                <div class="project-details__section">
+                    <h2>Overview</h2>
+                    <div id="projectOverview" class="project-details__overview"></div>
+                </div>
+
+                <div class="project-details__section">
+                    <h2>My Role</h2>
+                    <div id="projectRole" class="project-details__role"></div>
+                </div>
+
+                <div class="project-details__section">
+                    <h2>Key Features & Contributions</h2>
+                    <div id="projectFeatures" class="project-details__features"></div>
+                </div>
+
+                <div class="project-details__section">
+                    <h2>Technologies Used</h2>
+                    <div id="projectTechnologies" class="project-details__technologies"></div>
+                </div>
+
+                <div class="project-details__section">
+                    <h2>Outcome & Impact</h2>
+                    <div id="projectOutcome" class="project-details__outcome"></div>
+                </div>
+
+                <div class="project-details__section">
+                    <h2>Project Screenshots</h2>
+                    <div class="project-details__gallery" id="projectGallery"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Ravi Patel</h3>
+                    <p class="footer__description">Senior Flutter Developer passionate about creating beautiful and
+                        efficient mobile applications.</p>
+                    <div class="footer__social">
+                        <a href="https://github.com/yourusername" target="_blank" class="social-link"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" class="social-link"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html#about">About Me</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li>Mobile App Development</li>
+                        <li>Flutter Development</li>
+                        <li>UI/UX Design</li>
+                        <li>App Maintenance</li>
+                        <li>Performance Optimization</li>
+                        <li>Technical Consulting</li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mumbai, Maharashtra, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 1234567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>your.email@example.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>&copy; 2024 Ravi Patel. All rights reserved.</p>
+                </div>
+                <div class="footer__made-with">
+                    <p>Made with <i class="fas fa-heart"></i> using Flutter</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update project details
+        function updateProjectDetails(project) {
+            console.log(project);
+            // Update header image
+            const headerImage = document.querySelector('.project-details__image img');
+            if (headerImage) {
+                headerImage.src = project.image || 'https://via.placeholder.com/1200x400';
+                headerImage.alt = project.title;
+            }
+
+            // Update title and subtitle
+            const title = document.querySelector('.project-details__title');
+            if (title) title.textContent = project.title;
+
+            const subtitle = document.querySelector('.project-details__subtitle');
+            if (subtitle) subtitle.textContent = project.subtitle;
+
+            // Update app store links
+            const appStoreLinks = document.querySelector('.project-details__links');
+            if (appStoreLinks) {
+                appStoreLinks.innerHTML = `
+                    ${project.appStoreLink ? `
+                        <a href="${project.appStoreLink}" class="btn btn--primary" target="_blank">
+                            <i class="fab fa-app-store"></i> App Store
+                        </a>
+                    ` : ''}
+                    ${project.playStoreLink ? `
+                        <a href="${project.playStoreLink}" class="btn btn--primary" target="_blank">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    ` : ''}
+                `;
+            }
+
+            // Update overview
+            const overview = document.querySelector('.project-details__overview');
+            if (overview) overview.textContent = project.overview;
+
+            // Update role
+            const role = document.querySelector('.project-details__role');
+            if (role) role.textContent = project.role;
+
+            // Update key features
+            const features = document.querySelector('.project-details__features');
+            if (features) {
+                features.innerHTML = project.features.map(feature => `
+                    <li>${feature}</li>
+                `).join('');
+            }
+
+            // Update technologies
+            const technologies = document.querySelector('.project-details__technologies');
+            if (technologies) {
+                technologies.innerHTML = project.technologies.map(tech => `
+                    <li>${tech}</li>
+                `).join('');
+            }
+
+            // Update outcome
+            const outcome = document.querySelector('.project-details__outcome');
+            if (outcome) outcome.textContent = project.outcome;
+
+            // Update gallery
+            const gallery = document.querySelector('.project-details__gallery');
+            if (gallery && project.gallery) {
+                gallery.innerHTML = project.gallery.map(screenshot => `
+                    <div class="project-details__gallery-item">
+                        <img src="${screenshot}" alt="${project.title} screenshot">
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Function to initialize the page
+        async function initializePage() {
+            try {
+                // Get project ID from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const projectId = urlParams.get('id');
+
+                if (!projectId) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                const data = {
+                    "projects": {
+                        "brandwave": {
+                            "id": "brandwave",
+                            "title": "Brandwave",
+                            "subtitle": "Transforming Customer Engagement Through Micro-Influencer Marketing",
+                            "image": "project/brandwave.webp",
+                            "appStoreLink": "https://apps.apple.com/in/app/brandwave-ai/id6450167041",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.meechat.chat",
+                            "overview": "Brandwave is a revolutionary platform that transforms how brands connect with customers through micro-influencer marketing. It enables users to discover exclusive offers, promote brands, and earn rewards while helping businesses increase their reach and engagement.",
+                            "role": "As the lead Flutter developer, I spearheaded the development of Brandwave's mobile application from concept to launch. I collaborated closely with the marketing team to implement micro-influencer features and integrated payment gateways for seamless transactions.",
+                            "features": [
+                                "Direct Offer Discovery: Implemented an intuitive interface for discovering deals and promotions",
+                                "Micro-Influencer Marketing: Developed tools for users to promote brands and earn rewards",
+                                "Digital Coupons: Created a system for sharing experiences and earning real rewards",
+                                "ShopNgo: Integrated QR code scanning for instant purchases",
+                                "Delivery Services: Added convenient delivery options from partnered stores"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform mobile development",
+                                "Firebase – Authentication & real-time database",
+                                "Bloc – State management",
+                                "REST APIs – Backend communication",
+                                "QR Code Scanner – For ShopNgo feature"
+                            ],
+                            "outcome": [
+                                "Created a seamless platform for micro-influencer marketing",
+                                "Enhanced user engagement through reward-based promotions",
+                                "Streamlined the shopping experience with digital coupons"
+                            ],
+                            "gallery": [
+                                "project/brandwave1.webp",
+                                "project/brandwave2.webp",
+                                "project/brandwave3.webp",
+                                "project/brandwave4.webp",
+                                "project/brandwave5.webp",
+                                "project/brandwave6.webp",
+                                "project/brandwave7.webp",
+                                "project/brandwave8.webp"
+                            ]
+                        },
+                        "coincrowd": {
+                            "id": "coincrowd",
+                            "title": "CoinCrowd",
+                            "subtitle": "Revolutionizing Web3 Payments & Authentication",
+                            "image": "project/coincrowd_app_logo.png",
+                            "appStoreLink": "https://apps.apple.com/in/app/coincrowd/id1599222438",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.coincrowd.coincrowd",
+                            "overview": "CoinCrowd is an innovative Web3 platform that simplifies cryptocurrency transactions and wallet management. It integrates fiat-to-crypto payments, secure wallet authentication, and real-time blockchain interactions, making crypto adoption more accessible and user-friendly.",
+                            "role": "As a part-time contractor, I led the Web3 integration and frontend development of CoinCrowd. I designed and implemented the secure wallet authentication system using Web3Auth, integrated MoonPay for fiat-to-crypto transactions, and developed real-time blockchain interaction features.",
+                            "features": [
+                                "Web3 Authentication: Integrated Web3Auth for seamless, keyless logins",
+                                "Crypto Transactions: Implemented MoonPay for fiat-to-crypto purchases",
+                                "Wallet Management: Developed secure wallet creation and management features",
+                                "Real-time Updates: Created live blockchain interaction monitoring"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Web3Auth – Authentication",
+                                "MoonPay – Crypto transactions",
+                                "Bloc – State management",
+                                "Firebase – Backend services",
+                                "Dio – API integration"
+                            ],
+                            "outcome": [
+                                "Improved user engagement with intuitive Web3 experience",
+                                "Enhanced security and compliance for user funds",
+                                "Scaled to support thousands of active users"
+                            ],
+                            "gallery": [
+                                "project/Coincrowd/1.png",
+                                "project/Coincrowd/2.png",
+                                "project/Coincrowd/3.png",
+                                "project/Coincrowd/4.png",
+                                "project/Coincrowd/5.png"
+                            ]
+                        },
+                        "otuhrplus": {
+                            "id": "otuhrplus",
+                            "title": "OTU HRPlus",
+                            "subtitle": "Smart HR & Payroll Management System",
+                            "image": "project/otu_app_logo.png",
+                            "appStoreLink": "https://apps.apple.com/in/app/otu-hrplus/id6499589116",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.otuhrplus.hrplus",
+                            "overview": "OTU HRPlus is an advanced HR and payroll management system designed to streamline employee management, payroll processing, and attendance tracking for businesses of all sizes.",
+                            "role": "As the lead Flutter developer, I architected and developed the complete HR management system. I designed the database schema for employee records, implemented biometric attendance integration, and created automated payroll calculation algorithms.",
+                            "features": [
+                                "Employee Management: Developed comprehensive employee record management",
+                                "Payroll Processing: Implemented automated salary calculations and tax deductions",
+                                "Attendance Tracking: Created real-time biometric and manual attendance systems",
+                                "Performance Management: Built tools for performance reviews and goal tracking",
+                                "Access Control: Implemented secure role-based access for different user types"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Bloc – State management",
+                                "REST APIs – Backend communication",
+                                "Hive & SQLite – Local storage",
+                                "Biometric Integration – For attendance"
+                            ],
+                            "outcome": [
+                                "Increased HR efficiency through automation",
+                                "Reduced manual errors in payroll processing",
+                                "Improved employee engagement with self-service features"
+                            ],
+                            "gallery": [
+                                "project/otuhr1.png",
+                                "project/otuhr2.png",
+                                "project/otuhr3.png"
+                            ]
+                        },
+                        "otuindia": {
+                            "id": "otuindia",
+                            "title": "OTU India",
+                            "subtitle": "Smart Job Portal for Job Seekers & Employers",
+                            "image": "project/otujob.webp",
+                            "appStoreLink": "https://apps.apple.com/in/app/otu-india/id1608873364",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.india.otu_android",
+                            "overview": "OTU India is a modern job portal that connects job seekers with employers through AI-powered job matching, application tracking, and seamless hiring solutions.",
+                            "role": "As the lead Flutter developer, I designed and implemented the AI-powered job matching system and real-time application tracking features. I developed the resume builder with dynamic templates and integrated push notifications for job alerts.",
+                            "features": [
+                                "Smart Job Search: Implemented AI-powered job recommendations",
+                                "Application Process: Created one-click job applications with tracking",
+                                "Resume Builder: Developed tools for professional resume creation",
+                                "Employer Dashboard: Built comprehensive job posting and candidate management",
+                                "Notifications: Integrated real-time updates for applications and interviews"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Firebase – Authentication & database",
+                                "Bloc – State management",
+                                "REST APIs – Backend communication",
+                                "Hive & SQLite – Offline storage"
+                            ],
+                            "outcome": [
+                                "Enabled faster job searches with AI recommendations",
+                                "Increased employer engagement with streamlined tools",
+                                "Improved job seeker experience with easy applications"
+                            ],
+                            "gallery": [
+                                "project/otujob1.webp",
+                                "project/otujob2.webp",
+                                "project/otujob3.webp",
+                                "project/otujob4.webp",
+                                "project/otujob5.webp",
+                                "project/otujob6.webp"
+                            ]
+                        },
+                        "xlschool": {
+                            "id": "xlschool",
+                            "title": "XLSchool",
+                            "subtitle": "Comprehensive School Management Solution",
+                            "image": "project/pXLSchool.webp",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.xongolab.xlschool",
+                            "overview": "XLSchool is a feature-rich school management system that digitalizes and streamlines academic and administrative operations for educational institutions.",
+                            "role": "As a Flutter developer, I designed and implemented the school management system's core features. I developed the student attendance tracking system with biometric integration, created the exam management module with automated grading, and implemented secure fee payment processing.",
+                            "features": [
+                                "Student Management: Developed digital record-keeping systems",
+                                "Attendance System: Created real-time attendance monitoring",
+                                "Exam Management: Built tools for scheduling and grading",
+                                "Fee Management: Implemented secure payment processing",
+                                "Communication: Integrated messaging for instant updates"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Firebase – Authentication & database",
+                                "Provider – State management",
+                                "REST APIs – Backend communication",
+                                "Payment Gateway – Fee processing"
+                            ],
+                            "outcome": [
+                                "Reduced administrative workload through automation",
+                                "Enhanced communication between stakeholders",
+                                "Improved attendance and fee management efficiency"
+                            ],
+                            "gallery": [
+                                "project/pXLSchool1.webp",
+                                "project/pXLSchool2.webp",
+                                "project/pXLSchool3.webp",
+                                "project/pXLSchool4.webp",
+                                "project/pXLSchool5.webp",
+                                "project/pXLSchool6.webp"
+                            ]
+                        },
+                        "xlconnect": {
+                            "id": "xlconnect",
+                            "title": "XLConnect",
+                            "subtitle": "Empowering Collaboration and Communication",
+                            "image": "project/xlConnectIcon.webp",
+                            "appStoreLink": "https://apps.apple.com/in/app/xlconnect/id6452722131",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.xongolab.xlconnect",
+                            "overview": "XLConnect is a cutting-edge collaboration platform designed to enhance the learning experience for students and educators through seamless communication and resource sharing.",
+                            "role": "As the lead developer, I architected the real-time collaboration platform using Socket.IO for instant messaging and notifications. I implemented secure file sharing capabilities and developed the group project management system.",
+                            "features": [
+                                "Real-time Communication: Implemented instant messaging and notifications",
+                                "Resource Sharing: Developed tools for seamless content sharing",
+                                "Group Projects: Created collaborative workspace features",
+                                "Personalization: Built customizable learning environments",
+                                "Security: Implemented robust privacy and security measures"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Firebase – Authentication & database",
+                                "Socket.IO – Real-time communication",
+                                "SQLite – Local storage",
+                                "Provider – State management"
+                            ],
+                            "outcome": [
+                                "Enhanced collaboration between students and educators",
+                                "Improved communication and project management",
+                                "Created a secure environment for educational content"
+                            ],
+                            "gallery": [
+                                "project/xlConnectIcon1.webp",
+                                "project/xlConnectIcon2.webp",
+                                "project/xlConnectIcon3.webp",
+                                "project/xlConnectIcon4.webp",
+                                "project/xlConnectIcon5.webp",
+                                "project/xlConnectIcon6.webp"
+                            ]
+                        },
+                        "xlcourierdriver": {
+                            "id": "xlcourierdriver",
+                            "title": "XLCourier Driver",
+                            "subtitle": "On-Demand Courier Delivery Application",
+                            "image": "project/xlCourierDriver.webp",
+                            "appStoreLink": "https://apps.apple.com/in/app/xlcourier-driver/id6475755818",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.xongolab.xlcourierdriver",
+                            "overview": "XLCourier Driver is an innovative on-demand courier delivery application that streamlines the delivery process for courier drivers and enhances the overall delivery experience.",
+                            "role": "As the lead developer, I designed and implemented the driver's application with real-time GPS tracking and route optimization. I developed the digital signature system for delivery confirmation and created the job history tracking feature.",
+                            "features": [
+                                "Driver Registration: Implemented streamlined onboarding process",
+                                "Delivery Management: Created request acceptance/rejection system",
+                                "Location Tracking: Integrated real-time GPS tracking",
+                                "Digital Signatures: Developed secure delivery confirmation",
+                                "Job History: Built comprehensive delivery tracking"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Firebase – Authentication & database",
+                                "Google Maps API – Location services",
+                                "Dio – API integration",
+                                "SQLite – Local storage"
+                            ],
+                            "outcome": [
+                                "Improved delivery efficiency with real-time tracking",
+                                "Streamlined courier registration process",
+                                "Enhanced delivery accountability and tracking"
+                            ],
+                            "gallery": [
+                                "project/xlCourierDriver1.webp",
+                                "project/xlCourierDriver2.webp",
+                                "project/xlCourierDriver3.webp",
+                                "project/xlCourierDriver4.webp",
+                                "project/xlCourierDriver5.webp",
+                                "project/xlCourierDriver6.webp",
+                                "project/xlCourierDriver7.webp"
+                            ]
+                        },
+                        "xlrideshare": {
+                            "id": "xlrideshare",
+                            "title": "XLRideshare",
+                            "subtitle": "Fast, Easy, and Cost-Effective Travel",
+                            "image": "project/xlRideshare.webp",
+                            "appStoreLink": "https://apps.apple.com/in/app/xlrideshare/id6471498109",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.xongolab.xlrideshareapp",
+                            "overview": "XLRideshare is a comprehensive ride-sharing platform that makes travel fast, easy, and cost-effective through innovative ride-sharing solutions.",
+                            "role": "As the lead developer, I architected the ride-sharing platform with dual-mode functionality for passengers and drivers. I implemented real-time GPS tracking and route optimization, and developed the fare calculation system.",
+                            "features": [
+                                "Dual Mode: Implemented passenger and driver mode switching",
+                                "Ride Options: Created private rides and standard taxi booking",
+                                "Cost Optimization: Developed ride-sharing algorithms",
+                                "Payment Integration: Built secure payment processing",
+                                "Rating System: Implemented user feedback mechanism"
+                            ],
+                            "technologies": [
+                                "Flutter – Cross-platform development",
+                                "Real-time GPS – Location tracking",
+                                "Payment Gateway – Transaction processing",
+                                "Firebase – Authentication & database",
+                                "Google Maps API – Navigation"
+                            ],
+                            "outcome": [
+                                "Reduced travel costs through ride-sharing",
+                                "Improved driver earnings opportunities",
+                                "Enhanced user experience with multiple ride options"
+                            ],
+                            "gallery": [
+                                "project/xlRideshare1.webp",
+                                "project/xlRideshare2.webp",
+                                "project/xlRideshare3.webp",
+                                "project/xlRideshare4.webp",
+                                "project/xlRideshare5.webp"
+                            ]
+                        },
+                        "satsang": {
+                            "id": "satsang",
+                            "title": "Satsang",
+                            "subtitle": "A Path to Spiritual Enlightenment",
+                            "image": "project/satsangApp.webp",
+                            "appStoreLink": "https://apps.apple.com/in/app/satsang/id552732601",
+                            "playStoreLink": "https://play.google.com/store/apps/details?id=com.gurukul.satsang",
+                            "overview": "Satsang is a spiritual application that provides access to devotional content, scriptures, and teachings to help users lead a principled life based on spiritual wisdom.",
+                            "role": "As the lead developer, I designed and developed the spiritual content delivery platform. I implemented the streaming system for devotional content, created the offline content management system, and developed the digital library for scriptures and magazines.",
+                            "features": [
+                                "Content Library: Developed access to Katha and Kirtans",
+                                "Scripture Access: Created digital library of sacred texts",
+                                "Magazine Integration: Implemented monthly spiritual publications",
+                                "Video Content: Built streaming for devotional videos",
+                                "Offline Access: Developed content download capabilities"
+                            ],
+                            "technologies": [
+                                "Android – Native development",
+                                "Streaming Services – Content delivery",
+                                "Offline Storage – Content caching",
+                                "Media Player – Audio/Video playback",
+                                "Push Notifications – Content updates"
+                            ],
+                            "outcome": [
+                                "Enhanced spiritual engagement for devotees",
+                                "Improved access to religious content",
+                                "Created a platform for spiritual growth"
+                            ],
+                            "gallery": [
+                                "project/satsangApp1.webp",
+                                "project/satsangApp2.webp",
+                                "project/satsangApp3.webp",
+                                "project/satsangApp4.webp",
+                                "project/satsangApp5.webp",
+                                "project/satsangApp6.webp",
+                                "project/satsangApp7.webp"
+                            ]
+                        }
+                    }
+                };
+
+                // Find the project
+                const project = data.projects[projectId];
+                if (!project) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                // Update page content
+                updateProjectDetails(project);
+
+                // Update page title
+                document.title = `${project.title} - Project Details`;
+
+            } catch (error) {
+                console.error('Error loading project:', error);
+                // window.location.href = 'index.html';
+            }
+        }
+
+        // Initialize page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+
+</html>
